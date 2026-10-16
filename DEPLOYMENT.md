@@ -2,17 +2,20 @@
 
 **Domain:** `thejeevan.in` / `www.thejeevan.in`  
 **Host & Infrastructure:** Vercel (Production Edge Network)  
+**Personal Account:** `jeevanpaul766` (`jeevanpaul766@gmail.com`)  
+**GitHub Repository:** [`https://github.com/Jeevanpaul766/thejeevan-portfolio`](https://github.com/Jeevanpaul766/thejeevan-portfolio)  
 **Framework:** Next.js 16 (App Router) + TypeScript + Tailwind CSS  
-**CI/CD Pipeline:** GitHub Actions (`.github/workflows/ci-cd.yml`) + Vercel Deployment Hooks
+**CI/CD Pipeline:** GitHub Actions (`.github/workflows/ci-cd.yml`)
 
 ---
 
-## 1. Production Project Identity
+## 1. Production Project Identity (Personal Account)
 
+- **Vercel Account:** `jeevanpaul766` (`jeevanpaul766@gmail.com`)
 - **Vercel Project Name:** `thejeevan-portfolio`
-- **Vercel Organization ID:** `team_pHiWuT5f7O4R1JtEkuf6qdYL`
-- **Vercel Project ID:** `prj_aYvJqoFHbQv654tVpYmHdwQiDdPL`
-- **Default Vercel URL:** `https://thejeevan-portfolio.vercel.app`
+- **Vercel Project ID:** `prj_Ze9YgzQLBj7Z6udyMfTbfz66Nrka`
+- **Vercel Organization / Team ID:** `team_3K4q0EQIVt1mkTlV6FTcSifl`
+- **Active Deployment URL:** [`https://thejeevan-portfolio-beige.vercel.app`](https://thejeevan-portfolio-beige.vercel.app)
 - **Primary Custom Domain:** `https://thejeevan.in`
 - **Subdomain:** `https://www.thejeevan.in`
 
@@ -20,22 +23,29 @@
 
 ## 2. GoDaddy DNS Configuration Table
 
-In your GoDaddy DNS Management console for **thejeevan.in** (as shown in your dashboard screenshot), apply these DNS updates:
+In your GoDaddy DNS Management console for **thejeevan.in** (as shown in your screenshot):
 
 | Action | Type | Name | Data / Value | TTL | Notes |
 |---|---|---|---|---|---|
-| **Edit Existing** | `A` | `@` | `76.76.21.21` | 600s / 1/2 Hour | Replace current `Parked` with Vercel Anycast IP |
-| **Edit Existing** | `CNAME` | `www` | `cname.vercel-dns.com.` | 1 Hour | Points `www.thejeevan.in` to Vercel's edge network |
-| *Keep as is* | `NS` | `@` | `ns19.domaincontrol.com.` / `ns20` | 1 Hour | GoDaddy default nameservers |
+| **Edit Existing** | `A` | `@` | `76.76.21.21` | 600s / 1/2 Hour | Change `Parked` to `76.76.21.21` (Vercel Anycast IP) |
+| **Edit Existing** | `CNAME` | `www` | `cname.vercel-dns.com.` | 1 Hour | Route `www.thejeevan.in` to Vercel |
+| *Keep as is* | `NS` | `@` | `ns19.domaincontrol.com.` / `ns20` | 1 Hour | Default GoDaddy nameservers |
 | *Keep as is* | `TXT` | `_dmarc` | *Existing DMARC record* | 1 Hour | Email security record |
-
-*(Optional Alternative: If you prefer Vercel to manage all DNS, change GoDaddy Nameservers to `ns1.vercel-dns.com` and `ns2.vercel-dns.com`)*.
 
 ---
 
-## 3. GitHub Actions CI/CD Pipeline
+## 3. Domain Association in Vercel
 
-The automated CI/CD pipeline is configured in [`.github/workflows/ci-cd.yml`](.github/workflows/ci-cd.yml).
+If you previously tested adding `thejeevan.in` under another Vercel team (e.g. `trivexatechnologiesdev`), ensure it is removed there:
+1. Go to your personal project domains settings: [vercel.com/jeevanpaul766s-projects/thejeevan-portfolio/settings/domains](https://vercel.com/jeevanpaul766s-projects/thejeevan-portfolio/settings/domains)
+2. Add `thejeevan.in` and `www.thejeevan.in`
+3. Vercel will verify the A and CNAME records and issue a free automatic SSL certificate.
+
+---
+
+## 4. GitHub Actions CI/CD Pipeline
+
+The automated CI/CD pipeline is in [`.github/workflows/ci-cd.yml`](.github/workflows/ci-cd.yml).
 
 ### Pipeline Execution Flow
 ```mermaid
@@ -47,32 +57,20 @@ graph LR
     DeployJob --> Aliased[Aliased to thejeevan.in]
 ```
 
-### GitHub Repository Secrets Required
-When you push this repository to GitHub (`https://github.com/Jeevanpaul766`), add these secrets in **Settings ➔ Secrets and variables ➔ Actions**:
-
-1. **`VERCEL_TOKEN`**: Generate from [vercel.com/account/tokens](https://vercel.com/account/tokens)
-2. **`VERCEL_ORG_ID`**: `team_pHiWuT5f7O4R1JtEkuf6qdYL`
-3. **`VERCEL_PROJECT_ID`**: `prj_aYvJqoFHbQv654tVpYmHdwQiDdPL`
+### GitHub Secrets Configuration
+In your GitHub repo (`https://github.com/Jeevanpaul766/thejeevan-portfolio`), navigate to **Settings ➔ Secrets and variables ➔ Actions** and add:
+- **`VERCEL_TOKEN`**: Created from [vercel.com/account/tokens](https://vercel.com/account/tokens) under your `jeevanpaul766` account.
+- **`VERCEL_ORG_ID`**: `team_3K4q0EQIVt1mkTlV6FTcSifl`
+- **`VERCEL_PROJECT_ID`**: `prj_Ze9YgzQLBj7Z6udyMfTbfz66Nrka`
 
 ---
 
-## 4. Manual / Local Deployment Commands
-
-From your terminal inside the project directory:
+## 5. Local Commands
 
 ```bash
 # Deploy to preview
 npm run deploy:preview
 
-# Deploy directly to live production (thejeevan.in)
+# Deploy directly to production under jeevanpaul766
 npm run deploy
 ```
-
----
-
-## 5. Deployment Protection Settings (Vercel Dashboard)
-
-If you see a password/login prompt when visiting `thejeevan.in` after DNS propagation, turn off **Deployment Protection**:
-1. Open [vercel.com/trivexatechnologiesdev-7317s-projects/thejeevan-portfolio/settings/deployment-protection](https://vercel.com/trivexatechnologiesdev-7317s-projects/thejeevan-portfolio/settings/deployment-protection)
-2. Under **Deployment Protection**, toggle **Vercel Authentication** to **Disabled**.
-3. Click **Save**.
