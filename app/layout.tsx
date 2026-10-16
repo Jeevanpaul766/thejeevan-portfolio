@@ -17,6 +17,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://thejeevan.in"),
   title: "Jeevan Bandanadham — AI Engineer | Agentic AI | LangGraph | Python Backend",
   description:
     "Personal portfolio of Jeevan Bandanadham. Building production Generative AI, LangGraph multi-agent systems, hybrid RAG, LangSmith tracing, and Python FastAPI backends.",
@@ -46,12 +47,21 @@ export const metadata: Metadata = {
     description:
       "Production Generative AI and agentic systems with LangChain, LangGraph, and Python backends.",
     siteName: "thejeevan.in — Portfolio",
+    images: [
+      {
+        url: "https://thejeevan.in/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Jeevan Bandanadham — AI Engineer Portfolio Preview",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jeevan Bandanadham — AI Engineer | Agentic AI & Python Backend",
     description:
       "Building intelligent agentic systems with LangGraph, hybrid RAG, and dependable Python architectures.",
+    images: ["https://thejeevan.in/og-image.png"],
   },
   icons: {
     icon: "/favicon.ico",
