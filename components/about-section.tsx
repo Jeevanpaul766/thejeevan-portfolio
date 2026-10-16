@@ -84,7 +84,7 @@ export function AboutSection() {
                   With a foundational background in <strong className="text-[var(--ink)]">Mathematics, Statistics & Computer Science</strong> ({education.institution}), I approach AI engineering with rigorous quantitative and state-machine thinking rather than superficial wrapper scripting.
                 </p>
                 <p>
-                  My engineering journey spans one year as an AI Engineering Intern and Associate Backend Engineer at <strong className="text-[var(--ink)]">Vaaryan Interfaces</strong>, advancing to freelance production AI backends for <strong className="text-[var(--ink)]">WorldTrendz LLC</strong> published on the Apple App Store, and authoring open-source systems like <strong className="text-[var(--ink)]">Project Anveshan</strong> and <strong className="text-[var(--ink)]">NyayaPath</strong>.
+                  My engineering journey spans engineering production agentic backends at <strong className="text-[var(--ink)]">Trivexa Technologies</strong>, deploying live conversational AI applications on the Apple App Store for <strong className="text-[var(--ink)]">WorldTrendz LLC</strong>, enterprise GenAI and RAG services at <strong className="text-[var(--ink)]">Vaaryan Interfaces</strong>, and authoring recognized open-source architectures like <strong className="text-[var(--ink)]">Project Anveshan</strong> and <strong className="text-[var(--ink)]">NyayaPath</strong>.
                 </p>
               </div>
             </MotionReveal>

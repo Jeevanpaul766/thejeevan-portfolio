@@ -79,7 +79,7 @@ export function HeroSection() {
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--antique-gold)]"></span>
                   </span>
                   <span className="font-medium text-[var(--ink)]">
-                    Open for AI Engineer & Agentic Backend Roles
+                    AI Engineer at Trivexa Technologies · Open for Collaborations
                   </span>
                   <span className="text-[var(--line)]">•</span>
                   <span className="inline-flex items-center gap-1 text-[var(--muted-ink)] font-mono text-[0.72rem]">
@@ -143,7 +143,7 @@ export function HeroSection() {
                       Jeevan Bandanadham
                     </h3>
                     <p className="text-xs text-[var(--muted-ink)] font-sans">
-                      AI Engineer | Agentic AI & LangGraph
+                      AI Engineer @ Trivexa Technologies
                     </p>
                   </div>
                   <div className="text-right">

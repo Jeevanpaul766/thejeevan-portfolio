@@ -40,6 +40,18 @@ export const personalInfo = {
 
 export const experiences: Experience[] = [
   {
+    role: "AI Engineer",
+    company: "Trivexa Technologies",
+    period: "Jan 2026 – Present",
+    badge: "Current · Full-time",
+    link: "https://trivexatechnologies.in/",
+    linkText: "trivexatechnologies.in",
+    highlights: [
+      "Design production agentic backends with Python, LangChain, and LangGraph — multi-agent workflows, RAG pipelines, and tool-using agents.",
+      "Build FastAPI services with guardrails and tracing for long-horizon agent orchestration used in Trivexa’s AI systems.",
+    ],
+  },
+  {
     role: "Freelance AI & Backend Engineer",
     company: "WorldTrendz LLC",
     period: "Mar 2026 – Jun 2026",

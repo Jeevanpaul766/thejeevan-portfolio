@@ -4,7 +4,7 @@ import React from "react";
 import { EditorialHeading } from "./editorial-heading";
 import { MotionReveal } from "./motion-reveal";
 import { experiences, certifications, education } from "@/data/resume";
-import { Briefcase, Award, GraduationCap, ExternalLink, CheckCircle2, ShieldCheck } from "lucide-react";
+import { Briefcase, Award, GraduationCap, ExternalLink, CheckCircle2, ShieldCheck, Globe } from "lucide-react";
 import { AppleIcon } from "./icons";
 
 export function ExperienceSection() {
@@ -49,11 +49,15 @@ export function ExperienceSection() {
                           href={exp.link}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-1 text-xs text-[var(--forest)] hover:underline ml-2 bg-[var(--paper)] px-2 py-0.5 rounded border border-[var(--line)]"
+                          className="inline-flex items-center gap-1.5 text-xs text-[var(--forest)] hover:underline ml-2 bg-[var(--paper)] px-2.5 py-0.5 rounded border border-[var(--line)] hover:border-[var(--antique-gold)] transition-colors"
                         >
-                          <AppleIcon className="w-3 h-3 text-[var(--antique-gold)]" />
+                          {exp.link.includes("apple.com") ? (
+                            <AppleIcon className="w-3 h-3 text-[var(--antique-gold)]" />
+                          ) : (
+                            <Globe className="w-3 h-3 text-[var(--antique-gold)]" />
+                          )}
                           <span>{exp.linkText}</span>
-                          <ExternalLink className="w-3 h-3" />
+                          <ExternalLink className="w-3 h-3 text-[var(--muted-ink)]" />
                         </a>
                       )}
                     </div>
