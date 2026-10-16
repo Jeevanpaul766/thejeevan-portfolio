@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "thejeevan.in — Portfolio",
     images: [
       {
-        url: "https://thejeevan.in/og-image.png",
+        url: "https://thejeevan.in/og-image.png?v=2",
         width: 1200,
         height: 630,
         alt: "Jeevan Bandanadham — AI Engineer Portfolio Preview",
@@ -61,18 +61,18 @@ export const metadata: Metadata = {
     title: "Jeevan Bandanadham — AI Engineer | Agentic AI & Python Backend",
     description:
       "Building intelligent agentic systems with LangGraph, hybrid RAG, and dependable Python architectures.",
-    images: ["https://thejeevan.in/og-image.png"],
+    images: ["https://thejeevan.in/og-image.png?v=2"],
   },
   icons: {
     icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
-      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.png?v=2", type: "image/png", sizes: "32x32" },
+      { url: "/icon.svg?v=2", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=2", sizes: "any" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png?v=2", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: ["/favicon.ico"],
+    shortcut: ["/favicon.ico?v=2"],
   },
 };
 
