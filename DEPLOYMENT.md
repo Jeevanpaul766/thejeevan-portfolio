@@ -27,7 +27,8 @@ In your GoDaddy DNS Management console for **thejeevan.in** (as shown in your sc
 
 | Action | Type | Name | Data / Value | TTL | Notes |
 |---|---|---|---|---|---|
-| **Edit Existing** | `A` | `@` | `76.76.21.21` | 600s / 1/2 Hour | Change `Parked` to `76.76.21.21` (Vercel Anycast IP) |
+| **Edit Existing** | `A` | `@` | `216.198.79.1` (or `76.76.21.21`) | 600s / 1/2 Hour | Replace current `Parked` |
+| **Add New** | `TXT` | `_vercel` | `vc-domain-verify=thejeevan.in,19c18f69ff6835ce7d1f` | 1/2 Hour | Ownership verification record |
 | **Edit Existing** | `CNAME` | `www` | `cname.vercel-dns.com.` | 1 Hour | Route `www.thejeevan.in` to Vercel |
 | *Keep as is* | `NS` | `@` | `ns19.domaincontrol.com.` / `ns20` | 1 Hour | Default GoDaddy nameservers |
 | *Keep as is* | `TXT` | `_dmarc` | *Existing DMARC record* | 1 Hour | Email security record |
