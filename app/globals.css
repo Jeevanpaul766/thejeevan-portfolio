@@ -1,26 +1,110 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #F4F0E6;
+  --ivory: #FBF8F1;
+  --forest: #183D32;
+  --deep-forest: #102A23;
+  --ink: #242820;
+  --muted-ink: #6F7166;
+  --antique-gold: #B08D57;
+  --antique-gold-light: #C9A975;
+  --sage: #A7B2A0;
+  --line: #D9D1C2;
+  --line-light: #E7E0D3;
+  --white: #FFFFFF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-paper: var(--paper);
+  --color-ivory: var(--ivory);
+  --color-forest: var(--forest);
+  --color-deep-forest: var(--deep-forest);
+  --color-ink: var(--ink);
+  --color-muted-ink: var(--muted-ink);
+  --color-antique-gold: var(--antique-gold);
+  --color-antique-gold-light: var(--antique-gold-light);
+  --color-sage: var(--sage);
+  --color-line: var(--line);
+  --color-line-light: var(--line-light);
+  --color-white: var(--white);
+  --font-serif: var(--font-serif), Georgia, Cambria, serif;
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle editorial paper grain */
+.paper-texture {
+  background-color: var(--paper);
+  background-image: radial-gradient(rgba(36, 40, 32, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.ivory-card {
+  background-color: var(--ivory);
+  border: 1px solid var(--line);
+}
+
+.editorial-rule {
+  height: 1px;
+  background: linear-gradient(90deg, var(--antique-gold) 0%, var(--line) 40%, transparent 100%);
+}
+
+.editorial-rule-full {
+  height: 1px;
+  background: var(--line);
+}
+
+.gold-accent-line {
+  height: 1px;
+  background-color: var(--antique-gold);
+}
+
+/* Custom scrollbar matching paper and forest */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--antique-gold);
+}
+
+/* Selection */
+::selection {
+  background-color: #183D32;
+  color: #FBF8F1;
+}
+
+/* Focus outline */
+:focus-visible {
+  outline: 2px solid var(--antique-gold);
+  outline-offset: 2px;
 }
