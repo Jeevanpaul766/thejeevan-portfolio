@@ -11,8 +11,96 @@ import { ContactSection } from "@/components/contact-section";
 import { SiteFooter } from "@/components/site-footer";
 
 export default function Home() {
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Jeevan Bandanadham",
+    alternateName: "Jeevan Paul",
+    jobTitle: "AI Engineer",
+    description:
+      "AI Engineer building production Generative AI, LangGraph multi-agent systems, hybrid RAG, LangSmith tracing, and Python FastAPI backends.",
+    url: "https://thejeevan.in",
+    image: "https://thejeevan.in/images/jeevan-paul.png",
+    email: "mailto:Jeevanpaul766@gmail.com",
+    sameAs: [
+      "https://github.com/Jeevanpaul766",
+      "https://www.linkedin.com/in/jeevanbandanadham/",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "Andhra Pradesh",
+      addressCountry: "IN",
+    },
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Krishna Chaitanya Degree College",
+    },
+    knowsAbout: [
+      "LangGraph",
+      "Multi-Agent Orchestration",
+      "Hybrid RAG",
+      "LangSmith",
+      "FastAPI",
+      "Python",
+      "LangChain",
+      "Generative AI",
+      "ChromaDB",
+      "Docker",
+    ],
+    worksFor: {
+      "@type": "Organization",
+      name: "Trivexa Technologies",
+      url: "https://trivexatechnologies.in/",
+    },
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Jeevan Bandanadham — AI Engineer Portfolio",
+    url: "https://thejeevan.in",
+    description:
+      "Personal portfolio of Jeevan Bandanadham. Building production Generative AI, LangGraph multi-agent systems, hybrid RAG, and Python FastAPI backends.",
+    author: {
+      "@type": "Person",
+      name: "Jeevan Bandanadham",
+    },
+  };
+
+  const profilePageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    mainEntity: {
+      "@type": "Person",
+      name: "Jeevan Bandanadham",
+      url: "https://thejeevan.in",
+    },
+    dateCreated: "2026-10-01",
+    dateModified: "2026-10-19",
+  };
+
   return (
     <>
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(profilePageJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+
       {/* Editorial Opening Watermark Reveal */}
       <IntroSplash />
 

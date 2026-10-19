@@ -51,6 +51,9 @@ export function SiteFooter() {
             <a href="#contact" className="hover:text-[var(--antique-gold)] transition-colors">
               Contact
             </a>
+            <a href="/privacy" className="hover:text-[var(--antique-gold)] transition-colors">
+              Privacy
+            </a>
           </div>
 
           {/* Back to top button */}

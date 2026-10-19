@@ -1,0 +1,49 @@
+# Jeevan Bandanadham — AI Engineer Portfolio
+
+> Personal portfolio website of Jeevan Bandanadham, an AI Engineer specializing in production Generative AI, LangGraph multi-agent orchestration, hybrid RAG systems, LangSmith observability, and Python FastAPI backends. Based in Andhra Pradesh, India.
+
+## About
+
+- [Portfolio Home](https://thejeevan.in): Full portfolio with selected work, experience, capabilities, approach, field notes, and contact information.
+- [Full Content](https://thejeevan.in/llms-full.txt): Complete portfolio content in a single document for full LLM ingestion.
+
+## Selected Work
+
+- [Project Anveshan](https://github.com/Jeevanpaul766/PROJECT-ANVESHAN): Open Deep Research Operating System — 5-agent LangGraph state machine with citation provenance, adversarial critique, novelty-saturation stop detection, and disk checkpointing. 100% verified DOI/arXiv citation integrity.
+- [NyayaPath](https://github.com/Jeevanpaul766/NyayaPath): Dual-Regime Legal Guidance Agent — 12-node cyclic LangGraph agent with date-of-offence temporal routing, local hybrid RAG over 2,820 indexed statutory sections (ChromaDB + BM25 + RRF), and deterministic guardrails.
+- [WorldTrendz](https://apps.apple.com/in/app/worldtrendz/id6761761956): Production Conversational AI iOS Application — live on Apple App Store, backed by secure FastAPI services, context management, and multi-model LLM orchestration.
+- [Production GenAI & RAG Services at Vaaryan Interfaces](https://github.com/Jeevanpaul766): Enterprise backend architecture with Python, FastAPI, LangChain, PostgreSQL, MongoDB, GCP/Firebase, and Docker.
+
+## Professional Experience
+
+- AI Engineer at Trivexa Technologies (Jan 2026 – Present): Production agentic backends with Python, LangChain, LangGraph.
+- Freelance AI & Backend Engineer at WorldTrendz LLC (Mar 2026 – Jun 2026): Production conversational AI app on Apple App Store.
+- AI Engineer / Associate Backend Engineer at Vaaryan Interfaces Pvt. Ltd. (2025): Production GenAI backend services.
+- AI Engineering Intern at Vaaryan Interfaces Pvt. Ltd. (2024 – 2025): Python backend, LLM integration, RAG.
+
+## Certifications
+
+- Introduction to LangGraph (Python) — LangChain Academy
+- Introduction to Deep Agents — LangChain Academy
+- Quickstart: LangSmith Essentials — LangChain Academy
+- Hugging Face Agents Course — Certificate of Excellence
+- Prompt Engineering for ChatGPT — Great Learning
+- Claude Code in Action — Anthropic
+
+## Core Skills
+
+- Languages & Core: Python, REST APIs, OOP, FastAPI, TypeScript
+- Generative AI: LangGraph, Multi-Agent Orchestration, Hybrid RAG, Tool Use, HITL, Deterministic Guardrails, LangSmith Tracing, Deep Agents
+- Frameworks & Tools: LangChain, LangGraph, ChromaDB, BM25/RRF, Hugging Face Transformers, Docker, Git, PyTest, React/Vite
+- Backend & Cloud: FastAPI, PostgreSQL, MongoDB, Firebase, GCP, Ollama, AWS & Azure (Basic)
+
+## Contact
+
+- Email: Jeevanpaul766@gmail.com
+- GitHub: https://github.com/Jeevanpaul766
+- LinkedIn: https://www.linkedin.com/in/jeevanbandanadham/
+- Website: https://thejeevan.in
+
+## Optional
+
+- [Privacy Policy](https://thejeevan.in/privacy): Site privacy policy — no cookies, no trackers, no third-party analytics.
