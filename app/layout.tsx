@@ -88,6 +88,12 @@ export const metadata: Metadata = {
     ],
     shortcut: ["/favicon.ico?v=3"],
   },
+  verification: {
+    google: "bSzDv0IkZLF3RxBQm610uIS8IWeUadcOtBEXJPFYILQ",
+    other: {
+      "msvalidate.01": "A7C5E647CACA35B8669FD5E8529D73E7",
+    },
+  },
 };
 
 export const viewport: Viewport = {
